@@ -33,6 +33,24 @@ struct node* insert(struct node* root, int data)
     return root;
 }
 
+int numberOfLeaves(struct node* root)
+{
+    if(root == NULL)
+    {
+        return 0;
+    }
+    
+    struct node* ptr = root;
+    if(ptr->left == NULL && ptr->right == NULL)
+    {
+        return 1;
+    }
+    else
+    {
+        return numberOfLeaves(ptr->left) + numberOfLeaves(ptr->right);
+    }
+}
+
 int main()
 {
     struct node* root = NULL;
