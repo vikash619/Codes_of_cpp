@@ -3,6 +3,8 @@ using namespace std;
 
 // Selection Sort = keeking index of minimum element in each iteration than swap with ith index
 
+//first method
+
 void selection_sort(int arr[], int len)
 {
     for(int i = 0; i < len-1; i++)
@@ -29,6 +31,64 @@ int main()
     
     selection_sort(arr,len);
     for(int i = 0; i < len; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+// second method
+
+
+
+#include<iostream>
+using namespace std;
+
+int min(int arr[], int size, int k)
+{
+    int min = arr[k];
+    int loc = k;
+    
+    for(int j = k+1; j < size; j++)
+    {
+        if(min > arr[j])
+        {
+            min = arr[j];
+            loc = j;
+        }
+    }
+    
+    return loc;
+}
+
+
+int main()
+{
+    int arr[] = {33,11,66,88,99,77,44,22,1};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    
+    int k, loc, temp;
+    
+    for(k = 0; k < size-2; k++)
+    {
+        loc = min(arr,size,k);
+        
+        temp = arr[k];
+        arr[k] = arr[loc];
+        arr[loc] = temp;
+    }
+    
+    for(int i = 0; i < size; i++)
     {
         cout<<arr[i]<<" ";
     }
