@@ -1,9 +1,11 @@
 #include<iostream>
 using namespace std;
 
-// Selection Sort = keeking index of minimum element in each iteration than swap with ith index
+// Selection Sort = seeking index of minimum element in each iteration than swap with ith index
+// time compexity = O(n2)
+// no. of comparision less than Bubble and Insertion Sort
 
-//first method
+//first method by pta nahi 
 
 void selection_sort(int arr[], int len)
 {
@@ -38,18 +40,7 @@ int main()
 }
 
 
-
-
-
-
-
-
-
-
-
-// second method
-
-
+// second method by saurabh sukla sir
 
 #include<iostream>
 using namespace std;
