@@ -1,14 +1,16 @@
 #include<iostream>
 using namespace std;
 
-// Selection Sort with while loop
+// this is very first sorting algorithm and it takes O(n2) time complexity
+// here we start from first element in every iteration and reach to len-i-1 postion for fixing it.
+// len-i-1 becoz we know every time one big element will fix in last so we dont check last position all the time
 
 void bubble_sort(int arr[], int len)
 {
-    int counter = 1;
-    while(counter < len)
+    int counter = 1;                                //counter will increase every time by 1
+    while(counter < len)                            //till counter < len
     {
-        for(int i = 0; i < len-counter; i++)
+        for(int i = 0; i < len-counter; i++)        //this will stop loop to go last  element every time
         {
             if(arr[i] > arr[i+1])
             {
