@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 
-
-// Here we pick one element from unsorted array and insert it to that position from where array should remain sorted
+// This algorithm said to be further optimisation upon Bubble Sort coz it takes less no. of comparision
+// Here we pick one element from unsorted array, store it in temporary variable and insert it to that position from where array should remain sorted
+// time complexity = O(n2)
 
 void insertionSort(int arr[], int len)
 {
